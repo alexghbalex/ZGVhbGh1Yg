@@ -1,0 +1,19 @@
+<mat-form-field appearance="fill">
+  <mat-label>Choose Year</mat-label>
+  <mat-select (selectionChange)="setYear($event.value)">
+    <mat-option>year</mat-option>
+    <mat-option *ngFor="let year of years" [value]="year">
+      {{year}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Choose Class</mat-label>
+  <mat-select (selectionChange)="setCourse($event.value)">
+    <mat-option>course</mat-option>
+    <mat-option *ngFor="let class of classes" [value]="class">
+      {{class}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

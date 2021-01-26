@@ -1,0 +1,9 @@
+:host {
+  text-align: end;
+}
+
+mat-button-toggle {
+  &.mat-button-toggle-checked {
+    color: green;
+  }
+}

@@ -1,0 +1,22 @@
+<table mat-table [dataSource]="students | async" class="mat-elevation-z8">
+  <ng-container matColumnDef="Name">
+    <th mat-header-cell *matHeaderCellDef>Name</th>
+    <td mat-cell *matCellDef="let element"> {{element.fname}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="S.Name">
+    <th mat-header-cell *matHeaderCellDef>S.Name</th>
+    <td mat-cell *matCellDef="let element"> {{element.lname}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Score">
+    <th mat-header-cell *matHeaderCellDef>Score</th>
+    <td mat-cell *matCellDef="let element"> {{element.grade}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+      (click)="selectStudent(row)"
+      [ngClass]="{selected: row.fname + row.lname === (selectedStudent | async)}"></tr>
+</table>
+

@@ -1,0 +1,29 @@
+:host {
+  display: block;
+  height: 400px;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  margin-top: 5px;
+
+  .mat-header-row {
+    background-color: greenyellow;
+  }
+
+  tr {
+    &:nth-child(2n) {
+      background-color: antiquewhite;
+    }
+
+    &.selected {
+      background-color: indianred;
+    }
+  }
+
+  th {
+    text-align: center;
+  }
+}

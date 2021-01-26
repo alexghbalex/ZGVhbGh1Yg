@@ -1,0 +1,11 @@
+<mat-button-toggle-group (change)="toggle($event.value)">
+  <mat-button-toggle value="list" [checked]="!(isTable | async)">
+    <mat-icon>view_list</mat-icon>
+  </mat-button-toggle>
+  <mat-button-toggle value="table" [checked]="isTable | async">
+    <mat-icon>table_chart</mat-icon>
+  </mat-button-toggle>
+</mat-button-toggle-group>
+
+<app-students-list *ngIf="!(isTable | async)" [students]="students"></app-students-list>
+<app-students-table *ngIf="isTable | async" [students]="students"></app-students-table>
