@@ -26,6 +26,6 @@ export class StudentsComponent implements OnInit {
   }
 
   toggle(view: 'table' | 'list'): void {
-    this.stateService.table.next(view === 'table');
+    this.stateService.switchTableList(view === 'table');
   }
 }

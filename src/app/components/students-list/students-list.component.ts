@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Student } from '../../models';
 
@@ -7,12 +7,6 @@ import { Student } from '../../models';
   templateUrl: './students-list.component.html',
   styleUrls: ['./students-list.component.scss']
 })
-export class StudentsListComponent implements OnInit {
+export class StudentsListComponent {
   @Input() students: Observable<Student[]>;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }
