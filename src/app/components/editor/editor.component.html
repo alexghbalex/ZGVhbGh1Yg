@@ -1,1 +1,5 @@
-<p>editor works!</p>
+<app-student *ngIf="(isVisible | async) && (selectedStudent | async)" [student]="selectedStudent | async"></app-student>
+<angular-editor [placeholder]="'Enter text here...'" [(ngModel)]="content"></angular-editor>
+<div class="submit-button">
+  <button mat-raised-button color="primary" (click)="submit()">SUBMIT</button>
+</div>

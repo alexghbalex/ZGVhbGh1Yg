@@ -1,12 +1,13 @@
 section {
   width: 90%;
-  height: 50%;
-  margin: 10px auto;
+  height: 45%;
+  margin: 0 auto;
   border: 1px solid gray;
   padding: 10px;
 
   &:first-child {
-    height: 500px;
+    height: 400px;
+    margin-bottom: 10px;
 
     div {
       display: flex;
@@ -14,6 +15,20 @@ section {
 
       & * {
         width: 50%;
+        min-width: 400px;
+      }
+    }
+
+    @media (max-width: 890px) {
+      height: 55%;
+
+      div {
+        justify-content: center;
+
+        & * {
+          width: 100%;
+          min-width: 200px;
+        }
       }
     }
   }

@@ -17,6 +17,11 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
+import { AngularEditorModule } from '@kolkov/angular-editor';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -33,13 +38,18 @@ import { MatCardModule } from '@angular/material/card';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatFormFieldModule,
     MatSelectModule,
     MatOptionModule,
     MatButtonToggleModule,
     MatIconModule,
     MatTableModule,
-    MatCardModule
+    MatCardModule,
+    AngularEditorModule,
+    FormsModule,
+    MatButtonModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

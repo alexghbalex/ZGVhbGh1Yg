@@ -17,6 +17,9 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"
       (click)="selectStudent(row)"
-      [ngClass]="{selected: row.fname + row.lname === (selectedStudent | async)}"></tr>
+      [ngClass]="{
+        selected: row.fname + row.lname === (selectedStudent | async),
+        bad: row.grade <= 45
+      }"></tr>
 </table>
 

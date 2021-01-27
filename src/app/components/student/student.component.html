@@ -1,16 +1,25 @@
-<mat-card class="example-card">
-  <div mat-card-avatar class="example-header-image"></div>
+<mat-card class="example-card" *ngIf="student"
+          (click)="selectStudent(student)"
+          [ngClass]="{
+            selected: student.fname + student.lname === (selectedStudent | async),
+            bad: student.grade <= 45
+          }">
   <mat-card-content>
     <div>
-      <span>Name: {{student.fname}}</span>
-      <span>S.Name: {{student.lname}}</span>
+      <mat-icon>portrait</mat-icon>
     </div>
     <div>
-      <span>Class: {{student.course}}</span>
-      <span>Year: {{student.year}}</span>
+      <p>Name: {{student.fname}}</p>
+      <p>S.Name: {{student.lname}}</p>
     </div>
     <div>
-      <span>Score: <i>{{student.grade}}</i></span>
+      <p>Class: {{student.course}}</p>
+      <p>Year: {{student.year}}</p>
+    </div>
+    <div>
+      <p>Score: <input type="number" max="100" min="0" matInput
+                       [ngClass]="{error: student.grade > 100 || student.grade < 0}"
+                       [(ngModel)]="student.grade"></p>
     </div>
   </mat-card-content>
 </mat-card>

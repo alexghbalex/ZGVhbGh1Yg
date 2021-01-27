@@ -1,25 +1,25 @@
 :host {
   display: block;
-  height: 400px;
+  height: 300px;
   overflow: auto;
 }
 
 table {
-  width: 100%;
+  width: 90%;
   text-align: center;
-  margin-top: 5px;
+  margin: 5px auto;
 
   .mat-header-row {
-    background-color: greenyellow;
+    background-color: #DDFFD2;
   }
 
   tr {
-    &:nth-child(2n) {
-      background-color: antiquewhite;
+    &.selected {
+      background-color: #FBDBDB;
     }
 
-    &.selected {
-      background-color: indianred;
+    &.bad {
+      background-color: red;
     }
   }
 
